@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(project.router, prefix="/api/projects", tags=["projects"])
-app.include_router(project.router, prefix="/api/candidates", tags=["candidates"])
+app.include_router(candiates.router, prefix="/api/candidates", tags=["candidates"])
 
 @app.on_event("startup")
 async def startup_event():
